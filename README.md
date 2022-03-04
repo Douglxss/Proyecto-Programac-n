@@ -71,6 +71,7 @@ módulo: %
 potenciación: **
 
 # Suma #
+``` python
 #creamos dos variables para poder realizar la operación  
 a = 2  
 b = 5  
@@ -81,7 +82,7 @@ result = (a + b)
 result = 7  
 #presentamos un print para demostrar que nuestra operación sea correcta  
 print (result)
-
+```
 #Resta 
 #creamos dos variables para poder realizar la operación  
 a = 2
