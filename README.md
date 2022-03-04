@@ -235,4 +235,118 @@ d1 = {
 print(d1)
 #{'Nombre': 'Sara', 'Edad': 27, 'Documento': 1003882}
 ```
+# Tomando decisiones 
+## Sentencia If
+De no ser por las estructuras de control, el código en cualquier lenguaje de programación sería ejecutado secuencialmente hasta terminar. Un código, no deja de ser un conjunto de instrucciones que son ejecutadas unas tras otra. Gracias a las estructuras de control, podemos cambiar el flujo de ejecución de un programa, haciendo que ciertos bloques de código se ejecuten si y solo si se dan unas condiciones particulares.
+Uso del if
+Un ejemplo sería si tenemos dos valores a y b que queremos dividir. Antes de entrar en el bloque de código que divide a/b, sería importante verificar que b es distinto de cero, ya que la división por cero no está definida. Es aquí donde entran los condicionales if.
+``` python
+a = 4
+b = 2
+if b != 0:
+    print(a/b)
+```
+## Ciclo for
+A continuación explicaremos el bucle for y sus particularidades en Python, que comparado con otros lenguajes de comparación, tiene ciertas diferencias.
+El for es un tipo de bucle, parecido al while pero con ciertas diferencias. La principal es que el número de iteraciones de un for está definido de antemano, mientras que en un while no. La diferencia principal con respecto al while es en la condición. Mientras que en el while la condición era evaluada en cada iteración para decidir si volver a ejecutar o no el código, en el for no existe tal condición, sino un iterable que define las veces que se ejecutará el código. En el siguiente ejemplo vemos un bucle for que se ejecuta 5 veces, y donde la i incrementa su valor “automáticamente” en 1 en cada iteración.
+``` python 
+for i in range(0, 5):
+    print(i)
+
+# Salida:
+# 0
+# 1
+# 2
+# 3
+# 4
+```
+## Ciclo While
+El uso del while nos permite ejecutar una sección de código repetidas veces, de ahí su nombre. El código se ejecutará mientras una condición determinada se cumpla. Cuando se deje de cumplir, se saldrá del bucle y se continuará la ejecución normal. Llamaremos iteración a una ejecución completa del bloque de código.
+Cabe destacar que existe dos tipos de bucles, los que tienen un número de iteraciones no definidas, y los que tienen un número de iteraciones definidas. El while estaría dentro del primer tipo. Mas adelante veremos los for, que se engloban en el segundo.
+``` python 
+x = 5
+while x > 0:
+    x -=1
+    print(x)
+
+# Salida: 4,3,2,1,0
+```
+## Break
+#### Break con bucles for
+Veamos cómo podemos usar el break con bucles for. El range(5) generaría 5 iteraciones, donde la i valdría de 0 a 4. Sin embargo, en la primera iteración, terminamos el bucle prematuramente.
+El break hace que nada más empezar el bucle, se rompa y se salga sin haber hecho nada.
+``` python
+for i in range(5):
+    print(i)
+    break
+    # No llega
+
+# Salida: 0
+```
+Un ejemplo un poco más útil, sería el de buscar una letra en una palabra. Se itera toda la palabra y en el momento en el que se encuentra la letra que buscábamos, se rompe el bucle y se sale.
+Esto es algo muy útil porque si ya encontramos lo que estábamos buscando, no tendría mucho sentido seguir iterando la lista, ya que desperdiciaríamos recursos.
+``` python
+cadena = 'Python'
+for letra in cadena:
+    if letra == 'h':
+        print("Se encontró la h")
+        break
+    print(letra)
+
+# Salida:
+# P
+# y
+# t
+# Se encontró la h
+```
+#### Break con bucles while
+El break también nos permite alterar el comportamiento del while. Veamos un ejemplo.
+La condición while True haría que la sección de código se ejecutara indefinidamente, pero al hacer uso del break, el bucle se romperá cuando x valga cero.
+``` python
+x = 5
+while True:
+    x -= 1
+    print(x)
+    if x == 0:
+        break
+    print("Fin del bucle")
+
+#4, 3, 2, 1, 0
+```
+Por norma general, y salvo casos muy concretos, si ves un while True, es probable que haya un break dentro del bucle.
+#### Break y bucles anidados
+Como hemos dicho, el uso de break rompe el bucle, pero sólo aquel en el que está dentro.
+Es decir, si tenemos dos bucles anidados, el break romperá el bucle anidado, pero no el exterior.
+``` python
+for i in range(0, 4):
+    for j in range(0, 4):
+        break
+        #Nunca se realiza más de una iteración
+    # El break no afecta a este for
+    print(i, j)
+
+# 0 0
+# 1 0
+# 2 0
+# 3 0
+```
+## Continue
+
+El uso de continue al igual que el ya visto break, nos permite modificar el comportamiento de de los bucles while y for.
+Concretamente, continue se salta todo el código restante en la iteración actual y vuelve al principio en el caso de que aún queden iteraciones por completar.
+La diferencia entre el break y continue es que el continue no rompe el bucle, si no que pasa a la siguiente iteración saltando el código pendiente.
+En el siguiente ejemplo vemos como al encontrar la letra P se llama al continue, lo que hace que se salte el print(). Es por ello por lo que no vemos la letra P impresa en pantalla.
+``` python
+cadena = 'Python'
+for letra in cadena:
+    if letra == 'P':
+        continue
+    print(letra)
+# Salida:
+# y
+# t
+# h
+# o
+# n
+```
 
