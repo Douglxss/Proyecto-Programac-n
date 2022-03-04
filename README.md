@@ -7,13 +7,13 @@ Además, soporta el uso de módulos y paquetes, lo que significa que los program
 Por otro lado, uno de los beneficios más importantes de Python es que tanto la librería estándar como el intérprete están disponibles gratuitamente, tanto en forma binaria como en forma de fuente.
 Tampoco hay exclusividad, ya que Python y todas las herramientas necesarias están disponibles en todas las plataformas principales. Por lo tanto, es una opción multiplataforma, bastante tentadora para los desarrolladores que no quieren preocuparse por pagar altos costos de desarrollo.
 En definitiva, es un lenguaje de programación relativamente fácil de aprender, y las herramientas necesarias están disponibles para todos de forma gratuita. Esto hace que sea accesible para casi todo el mundo. Si dispones de tiempo para aprender, conseguirás crear esos proyectos que tienes en mente.
-# Tipos de variables en Python #
+# ¿Qué es una variable? #
 Una variable es un sitio donde guardamos una determinada información. En función del tipo de información que guardemos (texto, números, booleanas, etc.), la variable será de uno u otro tipo. Por simplicidad sólo vamos a ver las variables de texto y numéricas, ya que son las que se usan en más del 80% de las ocasiones.
 Cada variable debe tener un nombre con el que referirnos a ella. Python tiene en cuenta si escribimos en mayúsculas o minúsculas la variable (lo que se conoce como case sensitive). No es lo mismo una variable que se llame f1 que una que se llame F1.
 Como es lógico y, para evitar confusiones, el nombre de la variable no puede coincidir con los nombres de los «comandos» de Python (if, for, etc.). Tampoco podremos usar nombres de variables con tildes o con ñ.
 ¿Y por qué hay que decir lo que se mete en cada variable? Porque en función de lo que haya dentro de ella, se podrán hacer una u otras cosas, como por ejemplo sumar dos números.
 En Python estas son las variables más comunes:
-# Números #
+## Números ##
 En números hay dos tipos principales, los números enteros (llamados int) y los reales (llamados float). El separador decimal que tenemos que usar es el punto.
 Aunque si no decimos el tipo de número que va a contener, Python intentará decidir por sí mismo cuál es el más apropiado, esto en ocasiones produce errores. Mi recomendación mientras estés empezando a aprender, es la de que siempre especificar qué tipo de número es, ya que evitará futuras frustraciones.
 Definimos dos variables llamadas numero1 y # numero2, y asociaremos un número a cada una
@@ -25,7 +25,7 @@ print (número2)
 2.5
 Para saber de qué tipo es una determinada variable, basta con preguntarle a Python type(variable).
 
-# Texto #
+## Texto ##
 Las variables que almacenan texto se denominan strings (str). Tienen que estar entre comillas sencillas (‘) o dobles («), o si el texto ocupa varias líneas, entre triples comillas dobles («»»).
 Definimos dos variables llamadas texto y
 texto2, y asociaremos un texto a cada una
@@ -50,7 +50,7 @@ print(texto3)
 54
 
 Para unir dos textos, basta con usar el operador +.
-# Print y variables #
+## Print y variables ##
 Como hemos visto, el comando print es de gran utilidad para que el programa pueda comunicarse con nosotros. Este comando muestra el texto que pongamos, o incluso el valor que hay dentro de una variable. En el caso de que juntemos texto y números, debemos tomar la precaución de convertir los números en texto, ya que si no, Python no sabe cómo se hace la suma de un texto y un número.
 texto="Esto es un texto"
 número=15
@@ -61,7 +61,7 @@ print (texto+" "+número)
 Convirtiendo el número en texto, solucionamos el problema.
 print (texto+" "+str(número))
 
-# Operadores básicos #
+## Operadores básicos ##
 suma: +  
 resta: -  
 multiplicación: *  
@@ -70,7 +70,7 @@ división entera: //
 módulo: %  
 potenciación: **
 
-# Suma #
+### Suma 
 ``` python
 #creamos dos variables para poder realizar la operación  
 a = 2  
@@ -83,7 +83,7 @@ result = 7
 #presentamos un print para demostrar que nuestra operación sea correcta  
 print (result)
 ```
-# Resta 
+### Resta 
 ``` python
 #creamos dos variables para poder realizar la operación  
 a = 2
@@ -96,7 +96,7 @@ result = -3
 #presentamos un print para demostrar que nuestra operación sea correcta  
 print (result)
 ```
-# Multiplicación
+### Multiplicación
 ``` python
 #creamos dos variables para poder realizar la operación  
 a = 2 
@@ -110,7 +110,7 @@ result = 8
 print (result)
 ```
 
-# División
+### División
 ``` python
 #creamos dos variables para poder realizar la operación  
 a = 4
@@ -124,7 +124,7 @@ result = 2
 print (result)
 ```
 
-# Módulo
+### Módulo
 ``` python
 #creamos dos variables para poder realizar la operación  
 a = 20  
@@ -137,7 +137,7 @@ result = 20
 #presentamos un print para demostrar que nuestra operación sea correcta  
 print (result)
 ```
-# Potencia 
+### Potencia 
 ``` python
 #creamos dos variables para poder realizar la operación  
 a = 2  
