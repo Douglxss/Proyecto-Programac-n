@@ -83,7 +83,8 @@ result = 7
 #presentamos un print para demostrar que nuestra operación sea correcta  
 print (result)
 ```
-#Resta 
+# Resta 
+``` python
 #creamos dos variables para poder realizar la operación  
 a = 2
 b = 5  
@@ -94,8 +95,9 @@ result = (a - b)
 result = -3  
 #presentamos un print para demostrar que nuestra operación sea correcta  
 print (result)
-
-#Multiplicación 
+```
+# Multiplicación
+``` python
 #creamos dos variables para poder realizar la operación  
 a = 2 
 b = 4  
@@ -106,9 +108,10 @@ result = (a * b)
 result = 8    
 #presentamos un print para demostrar que nuestra operación sea correcta  
 print (result)
+```
 
-
-#División 
+# División
+``` python
 #creamos dos variables para poder realizar la operación  
 a = 4
 b = 2  
@@ -119,8 +122,10 @@ result = (a / b)
 result = 2 
 #presentamos un print para demostrar que nuestra operación sea correcta  
 print (result)
+```
 
-#Módulo 
+# Módulo
+``` python
 #creamos dos variables para poder realizar la operación  
 a = 20  
 b = 3  
@@ -131,8 +136,9 @@ result = (a % b)
 result = 20  
 #presentamos un print para demostrar que nuestra operación sea correcta  
 print (result)
-
-#Potencia 
+```
+# Potencia 
+``` python
 #creamos dos variables para poder realizar la operación  
 a = 2  
 b = 2  
@@ -143,4 +149,4 @@ result = (a ** b)
 result = 4  
 #presentamos un print para demostrar que nuestra operación sea correcta  
 print (result)
-
+```
