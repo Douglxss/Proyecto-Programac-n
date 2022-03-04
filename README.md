@@ -150,3 +150,89 @@ result = 4
 #presentamos un print para demostrar que nuestra operación sea correcta  
 print (result)
 ```
+# Tipos de datos en Python 
+
+## Integer
+Los tipos enteros o int en Python permiten almacenar un valor numérico no decimal ya sea positivo o negativo de cualquier valor. La función type() nos devuelve el tipo de la variable, y podemos ver con efectivamente es de la clase int.
+Ejemplos
+``` python 
+a = 0b100
+b = 0x17
+c = 0o720
+print(a, type(a)) #4 <class 'int'>
+print(b, type(b)) #23 <class 'int'>
+print(c, type(c)) #464 <class 'int'>
+```
+## Float
+El tipo numérico float permite representar un número positivo o negativo con decimales, es decir, números reales. Si vienes de otros lenguajes, tal vez conozcas el tipo doble, lo que significa que tiene el doble de precisión que un float. En Python las cosas son algo distintas, y los float son en realidad double.
+Para saber más: Los valores float son almacenados de una forma muy particular, denominada representación en coma flotante. En el estándar IEEE 754 se explica con detalle.
+Por lo tanto si declaramos una variable y le asignamos un valor decimal, por defecto la variable será de tipo float.
+Ejemplo
+``` python
+f = 0.10093
+print(f)       #0.10093
+print(type(f)) #<class 'float'>
+
+
+```
+
+
+
+## String
+Las cadenas en Python o strings son un tipo inmutable que permite almacenar secuencias de caracteres. Para crear una, es necesario incluir el texto entre comillas dobles ". Puedes obtener más ayuda con el comando help(str).
+``` python
+s = "Esto es una cadena"
+print(s)       #Esto es una cadena
+print(type(s)) #<class 'str'>
+```
+También es válido declarar las cadenas con comillas simples '.
+``` python
+s = 'Esto es otra cadena'
+print(s)        #Esto es otra cadena
+print(type(s))  #<class 'str'>
+```
+## Cast
+Hacer un cast o casting significa convertir un tipo de dato a otro. Anteriormente hemos visto tipos como los int, string o float. Pues bien, es posible convertir de un tipo a otro.
+Pero antes de nada, veamos los diferentes tipos de cast o conversión de tipos que se pueden hacer. Existen dos:
+Conversión implícita: Es realizada automáticamente por Python. Sucede cuando realizamos ciertas operaciones con dos tipos distintos.
+Conversión explícita: Es realizada expresamente por nosotros, como por ejemplo convertir de str a int con str().
+Conversión implícita
+Esta conversión de tipos es realizada automáticamente por Python, prácticamente sin que nos demos cuenta. Aun así, es importante saber lo que pasa por debajo para evitar problemas futuros.
+El ejemplo más sencillo donde podemos ver este comportamiento es el siguiente:
+``` python
+a = 1   # <class 'int'>
+b = 2.3 # <class 'float'>
+a = a + b
+print(a)       # 3.3
+print(type(a)) # <class 'float'>
+```
+Conversión explicita
+Por otro lado, podemos hacer conversiones entre tipos o cast de manera explícita haciendo uso de diferentes funciones que nos proporciona Python. Las más usadas son las siguientes:
+float(), str(), int(), list(), set()
+Y algunas otras como hex(), oct() y bin()
+
+## List
+Las listas en Python son uno de los tipos o estructuras de datos más versátiles del lenguaje, ya que permiten almacenar un conjunto arbitrario de datos. Es decir, podemos guardar en ellas prácticamente lo que sea. Si vienes de otros lenguajes de programación, se podría decir que son similares a los arrays.
+``` python
+lista = [1, 2, 3, 4]
+```
+
+## Tuple
+Las tuplas en Python o tuples son muy similares a las listas, pero con dos diferencias. Son inmutables, lo que significa que no pueden ser modificadas una vez declaradas, y en vez de inicializarse con corchetes se hace con (). Dependiendo de lo que queramos hacer, las tuplas pueden ser más rápidas.
+``` python 
+tupla = (1, 2, 3)
+print(tupla) #(1, 2, 3)
+```
+## Dictionary
+Un diccionario en Python es una colección de elementos, donde cada uno tiene una llave key y un valor value. Los diccionarios se pueden crear con paréntesis {} separando con una coma cada par key: value. En el siguiente ejemplo tenemos tres keys que son el nombre, la edad y el documento.
+
+``` python
+d1 = {
+  "Nombre": "Sara",
+  "Edad": 27,
+  "Documento": 1003882
+}
+print(d1)
+#{'Nombre': 'Sara', 'Edad': 27, 'Documento': 1003882}
+```
+
